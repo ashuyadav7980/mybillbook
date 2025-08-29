@@ -1,0 +1,296 @@
+/* Container */
+.dc-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Header */
+.dc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dc-head h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.dc-head-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Generic buttons (uses your existing .btn/.primary in the app too) */
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    cursor: pointer;
+}
+
+.icon-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Pills */
+.dc-filters {
+    display: flex;
+    gap: 12px;
+}
+
+.pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    min-width: 180px;
+}
+
+.pill-icon {
+    width: 16px;
+    height: 16px;
+    opacity: .8;
+}
+
+.pill-caret {
+    margin-left: auto;
+    width: 16px;
+    height: 16px;
+    opacity: .7;
+}
+
+.pill-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 6px;
+    min-width: 220px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    z-index: 20;
+    overflow: hidden;
+}
+
+.pill-item {
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.pill-item:hover {
+    background: #f5f6f8;
+}
+
+/* Table */
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.dc-table {
+    padding: 0;
+}
+
+.dc-thead {
+    display: grid;
+    grid-template-columns: 140px 260px 1fr 160px 140px;
+    gap: 0;
+    padding: 14px 16px;
+    border-bottom: 1px solid #f0f1f3;
+    font-weight: 600;
+}
+
+.dc-thead .th {
+    color: #111827;
+    font-size: 14px;
+}
+
+.dc-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #6b7280;
+}
+
+.dc-empty-icon svg {
+    width: 40px;
+    height: 40px;
+    opacity: .5;
+}
+
+.dc-empty-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Modal */
+.dc-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, .45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.dc-modal {
+    width: 720px;
+    max-width: 92vw;
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+}
+
+.dc-modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.dc-card {
+    border: 1px solid #eceef2;
+    border-radius: 12px;
+    padding: 14px;
+    margin-top: 12px;
+}
+
+.dc-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.dc-card-title {
+    font-weight: 600;
+}
+
+.dc-card-sub {
+    color: #6b7280;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.badge {
+    font-size: 11px;
+    background: #e9efff;
+    color: #3554f6;
+    padding: 2px 6px;
+    border-radius: 8px;
+    margin-left: 6px;
+}
+
+.dc-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.dc-field .lbl {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0 10px;
+    outline: none;
+    background: #fff;
+}
+
+.dc-note {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.dc-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+/* Switch */
+.dc-switch {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    display: inline-block;
+}
+
+.dc-switch input {
+    display: none;
+}
+
+.dc-switch span {
+    position: absolute;
+    inset: 0;
+    background: #e5e7eb;
+    border-radius: 999px;
+    transition: all .2s;
+}
+
+.dc-switch span:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    transition: all .2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+}
+
+.dc-switch input:checked+span {
+    background: #6c63ff;
+}
+
+.dc-switch input:checked+span:after {
+    transform: translateX(20px);
+}
+
+/* Basic buttons (relies on your global .btn styles; these are fallbacks) */
+.btn {
+    height: 38px;
+    padding: 0 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    cursor: pointer;
+}
+
+.btn.ghost {
+    background: #fff;
+}
+
+.btn.primary {
+    background: #6c63ff;
+    color: #fff;
+    border-color: #6c63ff;
+}

@@ -1,0 +1,23 @@
+.topbar {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 5
+}
+
+.icon-btn {
+    height: 36px;
+    width: 36px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer
+}

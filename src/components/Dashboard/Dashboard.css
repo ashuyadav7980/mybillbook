@@ -1,0 +1,281 @@
+/* Dashboard page */
+
+
+.db-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* -------- BANNERS -------- */
+.db-banners {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--stroke);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+/* Demo banner */
+.db-banner.demo {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    min-height: 96px;
+    background: linear-gradient(90deg, #eaf1ff 0%, #ffffff 60%);
+}
+
+.demo-title {
+    font-weight: 800;
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.demo-illustration {
+    height: 90px;
+    border-radius: 10px;
+    background: url("data:image/svg+xml,%3Csvg width='200' height='90' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='200' height='90' rx='10' fill='%23e5ecff'/%3E%3C/svg%3E") center/cover no-repeat;
+}
+
+/* Godown banner */
+.db-banner.soft {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    min-height: 96px;
+    background: linear-gradient(90deg, #fff5ec 0%, #ffffff 65%);
+}
+
+.soft-title {
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.soft-illustration {
+    height: 90px;
+    border-radius: 10px;
+    background: url("data:image/svg+xml,%3Csvg width='200' height='90' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='200' height='90' rx='10' fill='%23ffe8d7'/%3E%3C/svg%3E") center/cover no-repeat;
+}
+
+/* -------- TILES -------- */
+.db-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.db-tile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+}
+
+.db-tile .tile-l {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    color: #344054;
+}
+
+.db-tile .tile-ic {
+    font-size: 24px;
+}
+
+.db-tile .tile-amt {
+    font-weight: 900;
+}
+
+.db-tile.collect .tile-ic {
+    color: #16a34a;
+}
+
+.db-tile.pay .tile-ic {
+    color: #ef4444;
+}
+
+.db-tile .tile-title .caret {
+    opacity: .6;
+    margin-right: 6px;
+}
+
+/* -------- MAIN GRID -------- */
+.db-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 14px;
+}
+
+/* Latest transactions table */
+.db-table-hd {
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.table {
+    border: 1px solid var(--stroke);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tr {
+    display: grid;
+    grid-template-columns: 1.1fr 1.4fr .7fr 1.3fr .8fr;
+    gap: 0;
+    padding: 10px 12px;
+    border-top: 1px solid var(--stroke);
+    font-size: 14px;
+    color: #334155;
+}
+
+.tr:first-child {
+    border-top: none;
+}
+
+.tr.th {
+    background: #f8f9fc;
+    font-weight: 700;
+    color: #596074;
+}
+
+.tr .right {
+    text-align: right;
+}
+
+.db-table-foot {
+    padding-top: 10px;
+}
+
+/* Right column */
+.db-right {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cash-sum .cash-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cash-sum .cash-l {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: #344054;
+}
+
+.cash-ic {
+    color: var(--primary);
+}
+
+.cash-v {
+    font-weight: 900;
+}
+
+/* Loan promo */
+.loan-ad {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    background: linear-gradient(90deg, #e8fff7 0%, #ffffff 60%);
+}
+
+.ad-title {
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.ad-visual {
+    height: 110px;
+    border-radius: 10px;
+    background: url("data:image/svg+xml,%3Csvg width='200' height='110' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='200' height='110' rx='10' fill='%23ccfff0'/%3E%3C/svg%3E") center/cover no-repeat;
+}
+
+.btn.slim {
+    padding: 8px 12px;
+}
+
+/* Locked chart */
+.locked {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: #fbfbff;
+}
+
+.lock-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: url("data:image/svg+xml,%3Csvg width='54' height='54' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='27' cy='27' r='27' fill='%23eef2ff'/%3E%3Cpath d='M20 28h14v10H20z' fill='%236f5ef9'/%3E%3Cpath d='M23 28v-3a4 4 0 118 0v3' stroke='%236f5ef9' stroke-width='2' fill='none'/%3E%3C/svg%3E") center/cover no-repeat;
+}
+
+.lock-text {
+    color: #475569;
+}
+
+/* Buttons (use your project-wide ones if you already have) */
+.btn {
+    border: 1px solid var(--stroke);
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.btn.primary:hover {
+    background: var(--primary-600);
+}
+
+.btn.ghost {
+    background: #fff;
+}
+
+.pos-link {
+    border: none;
+    background: transparent;
+    color: var(--primary);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pos-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .db-banners {
+        grid-template-columns: 1fr;
+    }
+
+    .db-tiles {
+        grid-template-columns: 1fr;
+    }
+
+    .db-main {
+        grid-template-columns: 1fr;
+    }
+}

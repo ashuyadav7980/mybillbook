@@ -1,0 +1,64 @@
+
+
+/* page wrapper */
+.loan-wrap {
+    min-height: calc(100vh - 120px);
+    /* sits nicely inside your app-content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
+    background: transparent;
+    /* keep the app background as-is */
+}
+
+/* centered card */
+.loan-card {
+    width: 560px;
+    max-width: 100%;
+    background: #fff;
+    border: 1px solid var(--stroke);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.04);
+    padding: 28px;
+}
+
+/* title */
+.loan-title {
+    margin: 4px 0 22px;
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+/* field */
+.loan-label {
+    display: block;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.loan-input {
+    width: 100%;
+    border: 1px solid var(--stroke);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.loan-input:focus {
+    border-color: var(--primary);
+}
+
+/* action */
+.loan-btn {
+    width: 100%;
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+}

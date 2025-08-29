@@ -1,0 +1,260 @@
+/* Container */
+.cp2-wrap {
+    padding: 16px 18px 90px;
+    color: #111827;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* Top bar ---------------------------------------------------- */
+.cp2-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cp2-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cp2-back {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.cp2-left h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cp2-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cp2-iconbtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    cursor: pointer;
+}
+
+.cp2-linkbtn {
+    border: 0;
+    background: transparent;
+    padding: 8px 10px;
+    border-radius: 8px;
+    color: #374151;
+    cursor: pointer;
+}
+
+.cp2-linkbtn:hover {
+    background: #f3f4f6;
+}
+
+.cp2-btn {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cp2-btn.ghost {
+    background: #fff;
+    border-color: #e5e7eb;
+    color: #111827;
+}
+
+.cp2-btn.ghost:hover {
+    background: #f9fafb;
+}
+
+.cp2-btn.primary {
+    background: #6d5efc;
+    color: #fff;
+}
+
+.cp2-btn.primary:hover {
+    background: #5a4eef;
+}
+
+/* Sections --------------------------------------------------- */
+.cp2-section {
+    margin-top: 8px;
+}
+
+.cp2-section-title {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 10px 0 8px;
+}
+
+.cp2-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+/* Grid system */
+.cp2-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.cp2-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cp2-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width:1200px) {
+    .cp2-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:720px) {
+
+    .cp2-cols-4,
+    .cp2-cols-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fields / Inputs */
+.cp2-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cp2-label {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.cp2-input,
+.cp2-select,
+.cp2-textarea {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+.cp2-input:focus,
+.cp2-select:focus,
+.cp2-textarea:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, .12);
+}
+
+.cp2-textarea {
+    min-height: 96px;
+    resize: vertical;
+}
+
+.cp2-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cp2-hint {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* Opening balance */
+.cp2-open {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 8px;
+}
+
+/* Tiny button */
+.cp2-btn.tiny {
+    padding: 8px 10px;
+    font-size: 13px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+/* Custom select with caret (like screenshot) */
+.cp2-selectwrap {
+    position: relative;
+}
+
+.cp2-caret {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #6b7280;
+    pointer-events: none;
+}
+
+/* Address header (right checkbox) */
+.cp2-rowhead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.cp2-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* Credit period + limit spacing */
+.cp2-credits {
+    margin-top: 10px;
+}
+
+.cp2-chip {
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    padding: 8px 10px;
+    border-radius: 8px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* Help FAB */
+.cp2-fab {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #111827;
+    color: #fff;
+    border: 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .15);
+    cursor: pointer;
+}

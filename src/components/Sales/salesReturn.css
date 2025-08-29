@@ -1,0 +1,285 @@
+/* container */
+.sr-wrap {
+    padding: 8px 16px 24px;
+}
+
+/* header */
+.sr-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.sr-head h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.sr-head-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 10px;
+    border: 1px solid #e6e6eb;
+    background: #fff;
+    color: #4b5563;
+}
+
+/* filters */
+.sr-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #e6e6eb;
+    border-radius: 12px;
+    height: 40px;
+    padding: 0 12px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.pill-icon {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+.pill-caret {
+    margin-left: 4px;
+    color: #6b7280;
+}
+
+.pill-menu {
+    position: absolute;
+    z-index: 5;
+    top: 44px;
+    left: 0;
+    width: 240px;
+    background: #fff;
+    border: 1px solid #e6e6eb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+}
+
+.pill-item {
+    padding: 10px 12px;
+}
+
+.pill-item:hover {
+    background: #f5f6f8;
+}
+
+/* table */
+.card {
+    background: #fff;
+    border: 1px solid #e6e6eb;
+    border-radius: 14px;
+}
+
+.sr-table {
+    overflow: hidden;
+}
+
+.sr-thead {
+    display: grid;
+    grid-template-columns: 140px 220px 1fr 140px 160px 140px 140px;
+    gap: 0;
+    padding: 12px 14px;
+    background: #fafbfc;
+    border-bottom: 1px solid #e6e6eb;
+    font-weight: 700;
+    color: #374151;
+}
+
+.th {
+    white-space: nowrap;
+}
+
+.sr-empty {
+    padding: 48px 20px 64px;
+    text-align: center;
+}
+
+.sr-empty-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 10px;
+    border-radius: 16px;
+    background: #eef2ff;
+    color: #6366f1;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+}
+
+.sr-empty-text {
+    color: #6b7280;
+    font-weight: 600;
+}
+
+/* modal */
+.sr-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, .5);
+    display: grid;
+    place-items: center;
+    z-index: 50;
+}
+
+.sr-modal {
+    width: 760px;
+    max-width: 92vw;
+    border-radius: 14px;
+    background: #fff;
+    padding: 18px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, .2);
+}
+
+.sr-modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sr-card {
+    border: 1px solid #e6e6eb;
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+.sr-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sr-card-title {
+    font-weight: 700;
+}
+
+.sr-card-sub {
+    margin-top: 6px;
+    color: #6b7280;
+}
+
+.mt-12 {
+    margin-top: 12px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.sr-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.sr-field .lbl {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #e6e6eb;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: #fff;
+}
+
+.sr-note {
+    color: #6b7280;
+}
+
+/* toggle */
+.sr-switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 26px;
+}
+
+.sr-switch input {
+    display: none;
+}
+
+.sr-switch span {
+    position: absolute;
+    inset: 0;
+    background: #e5e7eb;
+    border-radius: 999px;
+    transition: .2s;
+}
+
+.sr-switch span::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 999px;
+    transition: .2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+.sr-switch input:checked+span {
+    background: #6b68f3;
+}
+
+.sr-switch input:checked+span::after {
+    transform: translateX(20px);
+}
+
+/* actions */
+.sr-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* shared buttons (works with your existing global styles) */
+.btn {
+    height: 36px;
+    border-radius: 10px;
+    padding: 0 14px;
+    border: 1px solid #e6e6eb;
+    background: #fff;
+    font-weight: 700;
+}
+
+.btn.ghost {
+    color: #374151;
+}
+
+.btn.primary {
+    background: #6b68f3;
+    color: #fff;
+    border-color: transparent;
+}

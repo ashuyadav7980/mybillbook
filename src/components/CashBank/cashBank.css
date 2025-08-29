@@ -1,0 +1,290 @@
+.cb-wrap {
+    padding: 18px 20px 28px;
+}
+
+.cb-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 14px;
+    color: #1f2937;
+}
+
+.cb-grid {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 16px;
+}
+
+/* Cards / containers */
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.cb-left .card+.card {
+    margin-top: 10px;
+}
+
+/* Total */
+.cb-total {
+    padding: 16px 16px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cb-total-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.cb-total-amt {
+    font-weight: 800;
+    color: #111827;
+}
+
+/* Cash / Bank sections */
+.cb-box {
+    padding: 14px 16px;
+}
+
+.cb-box-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: #344054;
+    margin-bottom: 10px;
+}
+
+.cb-inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cb-sub {
+    color: #64748b;
+    font-weight: 600;
+}
+
+.cb-sub-amt {
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Link button */
+.link-btn {
+    background: transparent;
+    border: 0;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Bank list */
+.cb-bank-list {
+    display: grid;
+    gap: 6px;
+}
+
+.cb-bank-row {
+    width: 100%;
+    padding: 12px 12px;
+    border: 1px dashed #cfe0ff;
+    border-radius: 10px;
+    background: #f8fbff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0f172a;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+.cb-bank-row:hover {
+    background: #f0f6ff;
+    border-color: #a8c5ff;
+}
+
+.cb-bank-row.active {
+    border-style: solid;
+    border-color: #6b8cff;
+    background: #eef3ff;
+}
+
+.cb-bank-name {
+    font-weight: 600;
+}
+
+.cb-bank-amt {
+    font-weight: 700;
+}
+
+/* Right pane */
+.cb-right {
+    min-width: 0;
+}
+
+/* Top actions */
+.cb-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #dfe3ea;
+    background: #fff;
+    color: #0f172a;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.btn.ghost:hover {
+    background: #f5f7fb;
+}
+
+.btn.primary {
+    background: #6b63ff;
+    border-color: #6b63ff;
+    color: #fff;
+}
+
+.btn.primary:hover {
+    filter: brightness(0.98);
+}
+
+/* Tabs */
+.cb-tabs {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #edf0f4;
+    margin-bottom: 8px;
+}
+
+.cb-tab {
+    border: 0;
+    background: transparent;
+    padding: 10px 14px;
+    font-weight: 700;
+    color: #64748b;
+    border-bottom: 2px solid transparent;
+    cursor: default;
+}
+
+.cb-tab.active {
+    color: #1f2937;
+    border-bottom-color: #6b63ff;
+}
+
+/* Filters */
+.cb-filterbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 12px;
+}
+
+.icon-btn {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: inline-grid;
+    place-items: center;
+    color: #475569;
+    cursor: pointer;
+}
+
+.icon-btn:hover {
+    background: #f8fafc;
+}
+
+/* pill dropdown */
+.pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 8px 12px;
+    color: #0f172a;
+    cursor: pointer;
+    min-width: 180px;
+}
+
+.pill-icon {
+    color: #64748b;
+}
+
+.pill-caret {
+    margin-left: auto;
+    color: #94a3b8;
+}
+
+.pill-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 240px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 6px;
+    box-shadow: 0 8px 24px rgba(16, 24, 40, .08);
+    z-index: 10;
+}
+
+.pill-item {
+    padding: 10px 10px;
+    border-radius: 8px;
+    color: #1f2937;
+}
+
+.pill-item:hover {
+    background: #f3f4f6;
+}
+
+/* Body / empty state */
+.cb-body {
+    height: 520px;
+    display: grid;
+    place-items: center;
+}
+
+.cb-empty {
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.cb-empty-icon {
+    margin-bottom: 12px;
+}
+
+.cb-empty-title {
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+.cb-empty-sub {
+    color: #6b7280;
+    font-weight: 500;
+}

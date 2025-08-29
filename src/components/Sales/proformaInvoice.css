@@ -1,0 +1,376 @@
+/* container */
+.pf-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* header */
+.pf-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pf-head h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.pf-head-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.icon-btn:hover {
+    background: #f8fafc;
+}
+
+.btn {
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: #635bff;
+    color: #fff;
+    border-color: #635bff;
+}
+
+.btn.ghost {
+    background: #fff;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
+
+/* filters */
+.pf-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.pill-icon {
+    color: #6b7280;
+}
+
+.pill-caret {
+    margin-left: 4px;
+    color: #6b7280;
+}
+
+.pill-menu {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    z-index: 5;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+    min-width: 210px;
+    overflow: hidden;
+}
+
+.pill-item {
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.pill-item:hover,
+.pill-item.active {
+    background: #f3f4f6;
+}
+
+/* table */
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.pf-table {
+    width: 100%;
+}
+
+.pf-thead {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr 1.6fr 1.1fr 1.1fr 1.1fr;
+    gap: 0;
+    padding: 14px 16px;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.pf-thead .th {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.pf-empty {
+    padding: 46px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.pf-empty-icon {
+    font-size: 40px;
+    color: #94a3b8;
+}
+
+.pf-empty-text {
+    color: #6b7280;
+}
+
+/* modal */
+.pf-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, .55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+}
+
+.pf-modal {
+    width: min(720px, 92vw);
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+}
+
+.pf-modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pf-card {
+    border: 1px solid #eef2f7;
+    border-radius: 14px;
+    padding: 14px;
+    margin-top: 12px;
+}
+
+.pf-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.pf-card-title {
+    font-weight: 600;
+}
+
+.pf-card-sub {
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.badge {
+    margin-left: 6px;
+    font-size: 11px;
+    padding: 2px 6px;
+    background: #e9efff;
+    color: #3b5bfd;
+    border-radius: 999px;
+}
+
+.pf-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.mt-12 {
+    margin-top: 12px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.pf-field .lbl {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.pf-field .input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0 12px;
+}
+
+.pf-note {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.pf-switch {
+    position: relative;
+    width: 44px;
+    height: 26px;
+    display: inline-block;
+}
+
+.pf-switch input {
+    display: none;
+}
+
+.pf-switch span {
+    position: absolute;
+    inset: 0;
+    background: #e5e7eb;
+    border-radius: 999px;
+    transition: .2s;
+}
+
+.pf-switch span:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    transition: .2s;
+}
+
+.pf-switch input:checked+span {
+    background: #635bff;
+}
+
+.pf-switch input:checked+span:after {
+    transform: translateX(18px);
+}
+
+.pf-modal-actions {
+    margin-top: 14px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* ---------- Shared filters row ---------- */
+.sales-filters {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    /* spacing between pills */
+    margin: 16px 0 12px;
+    flex-wrap: wrap;
+    /* wrap nicely on small screens */
+}
+
+/* One pill */
+.sales-pill {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 44px;
+    /* consistent height for all pills */
+    padding: 0 14px;
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    /* subtle border */
+    border-radius: 12px;
+    /* rounded corners like reference */
+    box-shadow: inset 0 1px 0 rgba(16, 24, 40, .04);
+    color: #111827;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* sizes */
+.sales-pill.search {
+    width: 220px;
+}
+
+/* search box width */
+.sales-pill.dropdown {
+    min-width: 220px;
+}
+
+/* icons */
+.sales-pill .icon {
+    font-size: 18px;
+    color: #667085;
+    margin-right: 2px;
+}
+
+.sales-pill .caret {
+    margin-left: auto;
+    font-size: 16px;
+    color: #667085;
+    transition: transform .18s ease;
+}
+
+.sales-pill.open .caret {
+    transform: rotate(180deg);
+}
+
+/* dropdown menu */
+.sales-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(16, 24, 40, .10);
+    padding: 6px;
+    z-index: 30;
+}
+
+.sales-menu .item {
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #111827;
+    cursor: pointer;
+}
+
+.sales-menu .item:hover {
+    background: #F5F7FB;
+}

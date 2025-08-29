@@ -1,0 +1,951 @@
+/* -------------------------------------------------------
+   Quotation / Estimate — page, filters, empty state
+   ------------------------------------------------------- */
+
+.qt-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.qt-header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #131722;
+}
+
+.qt-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* compact icon button (gear etc.) */
+.qt-iconbtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #e7eaf3;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.05s ease;
+}
+
+.qt-iconbtn:hover {
+    box-shadow: 0 6px 18px rgba(17, 24, 39, .08);
+}
+
+.qt-iconbtn:active {
+    transform: translateY(1px);
+}
+
+/* Primary action (Create Quotation) */
+.qt-primary {
+    height: 38px;
+    padding: 0 14px;
+    border-radius: 10px;
+    background: #6b7cff;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow .15s ease, transform .05s ease, opacity .15s ease;
+}
+
+.qt-primary:hover {
+    box-shadow: 0 8px 22px rgba(73, 85, 255, .35);
+}
+
+.qt-primary:active {
+    transform: translateY(1px);
+}
+
+/* -------------------------------------------------------
+   Selects (Date range, Show Open/Closed)
+   ------------------------------------------------------- */
+
+.qt-select {
+    position: relative;
+    min-width: 230px;
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid #e7eaf3;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    cursor: pointer;
+    color: #3c4257;
+}
+
+.qt-select .val {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.qt-dd {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 6px);
+    background: #fff;
+    border: 1px solid #e7eaf3;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(16, 24, 40, .12);
+    z-index: 20;
+    overflow: hidden;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.qt-opt {
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #1f2937;
+    transition: background .12s ease;
+}
+
+.qt-opt:hover {
+    background: #f7f8fb;
+}
+
+.qt-opt .ico {
+    opacity: .65;
+}
+
+/* -------------------------------------------------------
+   Table container + empty state
+   ------------------------------------------------------- */
+
+.qt-table {
+    background: #fff;
+    border: 1px solid #eef1f7;
+    border-radius: 12px;
+    min-height: 260px;
+    position: relative;
+}
+
+.qt-empty {
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7b8395;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.qt-empty .qt-emoji {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #f3f4ff;
+    color: #6b7cff;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+/* -------------------------------------------------------
+   Quick Quotation Settings modal
+   ------------------------------------------------------- */
+
+.qt-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, .45);
+    z-index: 60;
+    display: grid;
+    place-items: center;
+}
+
+.qt-modal {
+    width: min(820px, 92vw);
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 22px 64px rgba(16, 24, 40, .22);
+    overflow: hidden;
+}
+
+.qt-modal .qt-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 16px 18px;
+    border-bottom: 1px solid #eef1f7;
+}
+
+.qt-modal .qt-title {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.qt-close {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    border: 1px solid #e7eaf3;
+    background: #fff;
+    cursor: pointer;
+}
+
+.qt-modal .qt-body {
+    padding: 16px 18px 6px;
+    display: grid;
+    gap: 14px;
+}
+
+.qt-setting {
+    border: 1px solid #eef1f7;
+    border-radius: 12px;
+    padding: 14px 14px;
+    background: #fff;
+}
+
+.qt-setting .qt-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.qt-setting .qt-sub {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* Toggle mimic */
+.qt-toggle {
+    --w: 42px;
+    width: var(--w);
+    height: 24px;
+    border-radius: 999px;
+    border: 1px solid #e7eaf3;
+    background: #e9ecf7;
+    position: relative;
+    cursor: pointer;
+    transition: background .15s ease;
+}
+
+.qt-toggle::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, .18);
+    transition: transform .15s ease;
+}
+
+.qt-toggle.on {
+    background: #6b7cff;
+}
+
+.qt-toggle.on::after {
+    transform: translateX(calc(var(--w) - 22px));
+}
+
+/* Footer of modal */
+.qt-modal .qt-foot {
+    padding: 12px 18px 16px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid #eef1f7;
+}
+
+/* Secondary button */
+.qt-secondary {
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 10px;
+    background: #f7f8fb;
+    color: #111827;
+    border: 1px solid #e7eaf3;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------
+   Create Quotation screen (inline builder)
+   ------------------------------------------------------- */
+
+.cq-wrap {
+    background: #fff;
+    border: 1px solid #eef1f7;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.cq-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.cq-dashed {
+    border: 2px dashed #8ea2ff;
+    background: #f7f9ff;
+    color: #4254ff;
+    border-radius: 10px;
+    min-height: 110px;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+}
+
+.cq-line {
+    border: 2px dashed #9aa8ff;
+    border-radius: 10px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    color: #4254ff;
+    background: #f7f9ff;
+}
+
+.cq-right {
+    background: #fafbff;
+    border: 1px solid #eef1f7;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.cq-right .cq-label {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.cq-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* helpful utilities */
+.mr-8 {
+    margin-right: 8px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-12 {
+    margin-top: 12px;
+}
+
+/* =============== Theme tokens (light) =============== */
+:root {
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #667085;
+    --line: #eef1f7;
+    --primary: #5b6cff;
+    --primary-600: #4b59ff;
+    --primary-100: #eef0ff;
+    --success: #16a34a;
+    --shadow: 0 6px 24px rgba(16, 24, 40, .06), 0 2px 6px rgba(16, 24, 40, .05);
+    --radius: 12px;
+}
+
+/* =============== Page Scaffolding =============== */
+.page-wrap {
+    padding: 18px 22px 40px;
+    background: var(--bg);
+    min-height: 100%;
+}
+
+.qt-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.qt-header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+
+.qt-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* small round icon button */
+.qt-iconbtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: #2b2f36;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.qt-iconbtn:hover {
+    background: #fafcff
+}
+
+/* main action */
+.qt-primary {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.qt-primary:hover {
+    background: var(--primary-600)
+}
+
+/* =============== Filters (select-like) =============== */
+.qt-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 12px;
+    min-width: 210px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    user-select: none;
+}
+
+.qt-select .val {
+    color: #0f172a;
+    font-weight: 600
+}
+
+.qt-dd {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: var(--shadow);
+    width: 260px;
+    z-index: 12;
+}
+
+.qt-opt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    color: #1f2937;
+    cursor: pointer;
+}
+
+.qt-opt:hover {
+    background: #f4f6ff
+}
+
+/* =============== List table & empty state =============== */
+.qt-table {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.qt-empty {
+    padding: 70px 24px 80px;
+    text-align: center;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.qt-emoji {
+    width: 54px;
+    height: 54px;
+    display: inline-grid;
+    place-items: center;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background: var(--primary-100);
+    color: var(--primary);
+    font-size: 22px;
+}
+
+/* =============== Create Quotation Layout =============== */
+.qt-create-grid {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 18px;
+}
+
+/* left side */
+.qt-left .qt-panel {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px 12px 16px;
+    box-shadow: var(--shadow);
+}
+
+.qt-label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 8px
+}
+
+.qt-dashed {
+    border: 2px dashed #b9c1ff;
+    background: #fafbff;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.qt-dashed.big {
+    height: 130px
+}
+
+.qt-dashed.center {
+    display: grid;
+    place-items: center
+}
+
+.qt-dashed.row {
+    height: 54px
+}
+
+.linkish {
+    color: var(--primary);
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* items section */
+.qt-items {
+    margin-top: 12px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.qt-items-head {
+    display: grid;
+    grid-template-columns: 70px 1fr 120px 100px 150px 150px 120px 150px 210px;
+    gap: 0;
+    padding: 10px 12px;
+    color: #667085;
+    font-weight: 700;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+}
+
+.qt-scan {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #111827;
+    font-weight: 700;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 8px 10px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+
+.qt-scan:hover {
+    background: #fafcff
+}
+
+.qt-subtotal {
+    display: grid;
+    grid-template-columns: 1fr 150px 150px 150px;
+    justify-items: end;
+    gap: 0;
+    padding: 10px 12px;
+    border-top: 1px solid var(--line);
+    color: #334155;
+    font-weight: 600;
+}
+
+.qt-subtotal .v {
+    width: 100%;
+    text-align: right
+}
+
+/* small links under table */
+.qt-mini-links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+/* right side */
+.qt-right {
+    display: flex;
+    flex-direction: column;
+    gap: 14px
+}
+
+.qt-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 12px;
+}
+
+.qt-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px
+}
+
+.qt-field label {
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.qt-input {
+    height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0 10px;
+    background: #fff;
+}
+
+.qt-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px
+}
+
+.qt-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.qt-suffix {
+    font-size: 12px;
+    color: #475569;
+    background: #f4f6ff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 6px 8px;
+}
+
+.qt-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    color: #111827;
+    font-weight: 600
+}
+
+.qt-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0
+}
+
+.qt-check input {
+    width: 18px;
+    height: 18px
+}
+
+.qt-totalbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px dashed #cdd5ff;
+    border-radius: 12px;
+    margin: 10px 0;
+}
+
+.qt-total-title {
+    font-weight: 700
+}
+
+.qt-total-val {
+    font-weight: 800;
+    color: #111827
+}
+
+.qt-payrow {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0
+}
+
+.qt-selectbox {
+    height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fff;
+    padding: 0 8px;
+}
+
+.qt-paybtn {
+    width: 100%;
+    height: 38px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #f9fafb;
+    color: #111827;
+    font-weight: 700;
+}
+
+/* =============== Quick Settings Modal =============== */
+.qs-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, .45);
+    display: grid;
+    place-items: center;
+    z-index: 50;
+}
+
+.qs-modal {
+    width: min(760px, 92vw);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 16px;
+}
+
+.qs-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #0f172a;
+}
+
+/* each row with switch */
+.qs-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 12px;
+    margin-top: 10px;
+    background: #fff;
+}
+
+.qs-title {
+    font-weight: 700;
+    color: #0f172a
+}
+
+.qs-desc {
+    color: #475569;
+    font-size: 13px;
+    margin-top: 4px
+}
+
+/* iOS-like switch */
+.qs-switch {
+    position: relative;
+    width: 46px;
+    height: 26px;
+    display: inline-block;
+}
+
+.qs-switch input {
+    display: none
+}
+
+.qs-switch span {
+    position: absolute;
+    inset: 0;
+    background: #E5E7EB;
+    border-radius: 999px;
+    transition: .2s;
+}
+
+.qs-switch span:after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    transition: .2s;
+}
+
+.qs-switch input:checked+span {
+    background: #60a5fa
+}
+
+.qs-switch input:checked+span:after {
+    transform: translateX(20px)
+}
+
+.qs-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    border: 1px solid var(--line);
+}
+
+.btn.ghost {
+    background: #fff
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: #fff;
+    border-color: transparent
+}
+
+.btn.primary:hover {
+    background: var(--primary-600)
+}
+
+/* small helpers */
+.center {
+    text-align: center
+}
+
+.big.center {
+    display: grid;
+    place-items: center
+}
+
+/* keep the previous Quotation.css you added; append this */
+
+.qt-meta {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.qt-input.with-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0 10px;
+    background: #fff;
+}
+
+.qt-input.with-icon input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.qt-input.small {
+    height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0 10px;
+    width: 80px;
+}
+
+.qt-create-grid {
+    grid-template-columns: 1fr 340px;
+}
+
+.qt-items-head {
+    grid-template-columns: 70px 1fr 120px 100px 150px 150px 120px 150px 210px;
+}
+
+.qt-subtotal {
+    grid-template-columns: 1fr 150px 150px 150px;
+}
+
+/* Force the quotation screens to use a white background */
+:root {
+    /* if we used --bg in earlier CSS, make it white here */
+    --bg: #ffffff;
+}
+
+/* kill any dark background inherited from the app shell */
+body,
+.app-main,
+.app-content,
+.page-wrap,
+.qt-header,
+.qt-table,
+.qt-create-grid,
+.qt-meta {
+    background: #ffffff !important;
+}
+
+/* optional: keep the table container looking card-like */
+.qt-table,
+.qt-card {
+    border-radius: 12px;
+    background: #fff;
+}

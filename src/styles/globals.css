@@ -1,0 +1,162 @@
+:root {
+    --bg: #0f172a;
+    /* sidebar */
+    --bg-2: #0b1223;
+    --brand: #ffd166;
+    --primary: #2563eb;
+    --muted: #64748b;
+    --text: #0f172a;
+    --card: #ffffff;
+    --line: #e5e7eb;
+    --chip: #f3f4f6;
+    --green: #16a34a;
+    --red: #dc2626;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body,
+#root {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: #f8fafc;
+    color: var(--text)
+}
+
+.app-shell {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh
+}
+
+.app-sidebar {
+    background: var(--bg);
+    color: #cbd5e1
+}
+
+.app-main {
+    display: flex;
+    flex-direction: column;
+    min-width: 0
+}
+
+.app-content {
+    padding: 16px 20px 28px;
+}
+
+/* utilities */
+.card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.btn {
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 10px;
+    height: 40px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    cursor: pointer
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary)
+}
+
+.btn.ghost {
+    background: transparent;
+    border-color: transparent;
+    color: #fff
+}
+
+.btn.small {
+    height: 34px;
+    padding: 0 10px;
+    border-radius: 8px
+}
+
+.input {
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    padding: 0 12px;
+    background: #fff
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.space {
+    flex: 1
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0
+}
+
+.table th,
+.table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    font-size: 14px
+}
+
+.table th {
+    background: #f9fafb;
+    position: sticky;
+    top: 0;
+    z-index: 1
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--chip);
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-weight: 600
+}
+
+.kpi {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0
+}
+
+.kpi .tile {
+    padding: 14px 16px
+}
+
+.kpi .num {
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 6px
+}
+
+@media (max-width:1024px) {
+    .app-shell {
+        grid-template-columns: 72px 1fr
+    }
+}

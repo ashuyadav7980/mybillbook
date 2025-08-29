@@ -1,0 +1,290 @@
+/* Container */
+.po-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Header */
+.po-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.po-head h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.po-head-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Generic buttons (keeps in line with your other pages) */
+.btn {
+    border: 1px solid #dcdfe6;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: #6c5ce7;
+    color: #fff;
+    border-color: #6c5ce7;
+}
+
+.btn.ghost {
+    background: #fff;
+    color: #111827;
+}
+
+.icon-btn {
+    display: inline-grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Pills / filters */
+.po-filters {
+    display: flex;
+    gap: 14px;
+}
+
+.pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    padding: 10px 14px;
+    border-radius: 12px;
+    min-width: 170px;
+    cursor: default;
+}
+
+.pill-icon {
+    opacity: 0.7;
+}
+
+.pill-caret {
+    margin-left: 6px;
+    opacity: 0.7;
+}
+
+.pill-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 220px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+    z-index: 10;
+    overflow: hidden;
+}
+
+.pill-item {
+    padding: 10px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.pill-item:hover {
+    background: #f5f6fb;
+}
+
+/* Table */
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.po-table {
+    overflow: hidden;
+}
+
+.po-thead {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid #eef0f4;
+    padding: 12px 14px;
+    background: #fafbff;
+}
+
+.po-thead .th {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Empty state */
+.po-empty {
+    padding: 56px 16px;
+    text-align: center;
+    color: #6b7280;
+}
+
+.po-empty-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background: #eef0fe;
+    color: #6c5ce7;
+    font-size: 28px;
+}
+
+/* Modal */
+.po-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, 0.45);
+    display: grid;
+    place-items: center;
+    z-index: 1000;
+}
+
+.po-modal {
+    width: 720px;
+    max-width: calc(100vw - 32px);
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, .25);
+}
+
+.po-modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.po-card {
+    border: 1px solid #eef0f4;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 14px;
+}
+
+.po-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.po-card-title {
+    font-weight: 700;
+}
+
+.po-card-sub {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.po-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.po-field .lbl {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.po-field .input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: #fff;
+}
+
+.po-field .input:disabled {
+    background: #f5f6fb;
+    color: #9aa0a6;
+}
+
+.po-note {
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.po-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* iOS-style switch */
+.po-switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 26px;
+}
+
+.po-switch input {
+    display: none;
+}
+
+.po-switch span {
+    position: absolute;
+    inset: 0;
+    background: #e5e7eb;
+    border-radius: 999px;
+    transition: background .2s ease;
+}
+
+.po-switch span::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform .2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+.po-switch input:checked+span {
+    background: #6c5ce7;
+}
+
+.po-switch input:checked+span::after {
+    transform: translateX(20px);
+}
+
+/* Utils */
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-12 {
+    margin-top: 12px;
+}

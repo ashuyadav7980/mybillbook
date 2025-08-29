@@ -1,0 +1,305 @@
+/* container */
+.pi-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* header */
+.pi-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pi-head h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.pi-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #d7dce3;
+    background: #fff;
+}
+
+.btn.primary {
+    background: #6c5ce7;
+    color: #fff;
+    border-color: #6c5ce7;
+}
+
+.icon-btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #d7dce3;
+    background: #fff;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+}
+
+/* tabs */
+.pi-tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.pi-tab {
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid #e7e9ee;
+    background: #fff;
+    color: #4b5563;
+}
+
+.pi-tab.active {
+    border-color: #6c5ce7;
+    color: #6c5ce7;
+}
+
+/* filters */
+.pi-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border: 1px solid #d7dce3;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    min-width: 240px;
+    background: #fff;
+    border: 1px solid #e6e9ef;
+    border-radius: 10px;
+    padding: 6px;
+    margin-top: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+}
+
+.dropdown-item {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border: 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background: #f5f7fb;
+}
+
+/* table-ish card */
+.card {
+    background: #fff;
+    border: 1px solid #e6e9ef;
+    border-radius: 12px;
+}
+
+.pi-table {
+    overflow: hidden;
+}
+
+.pi-thead {
+    display: flex;
+    gap: 0;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eef1f5;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.th {
+    padding: 0 6px;
+}
+
+.w-15 {
+    width: 15%
+}
+
+.w-25 {
+    width: 25%
+}
+
+.w-35 {
+    width: 35%
+}
+
+.pi-empty {
+    padding: 48px 16px;
+    text-align: center;
+    color: #6b7280;
+}
+
+.empty-icon {
+    font-size: 40px;
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+/* modal */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal {
+    width: 680px;
+    max-width: 92vw;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.modal-head h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.modal-foot {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.setting-card {
+    border: 1px solid #e6e9ef;
+    border-radius: 10px;
+    padding: 14px;
+    background: #fff;
+    display: grid;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.setting-title {
+    font-weight: 600;
+}
+
+.setting-sub {
+    color: #6b7280;
+}
+
+/* toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+    margin-left: auto;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #d1d5db;
+    border-radius: 999px;
+    transition: .2s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.switch input:checked+.slider {
+    background: #6c5ce7;
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(18px);
+}
+
+/* Base button (keeps your current primary styles) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background: #6b5cff;
+    /* or your primary color */
+    color: #fff;
+}
+
+/* Secondary/Ghost button (use for Cancel) */
+.btn.ghost,
+.btn.secondary,
+button.cancel {
+    background: #ffffff;
+    color: #344054 !important;
+    /* dark text so it’s visible on white */
+    border: 1px solid #d0d5dd;
+    /* subtle border for contrast */
+}
+
+.btn.ghost:hover,
+.btn.secondary:hover,
+button.cancel:hover {
+    background: #f2f4f7;
+    border-color: #cbd5e1;
+    color: #1f2937;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Optional: focus ring for accessibility */
+.btn:focus-visible {
+    outline: 3px solid rgba(107, 92, 255, 0.35);
+    outline-offset: 2px;
+}

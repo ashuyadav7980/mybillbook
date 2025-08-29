@@ -1,0 +1,313 @@
+:root {
+    --primary: #6f5ef9;
+    --primary-600: #5b4ae9;
+    --bg: #f7f8fb;
+    --stroke: #e6e8ee;
+    --text: #222;
+    --muted: #6b7280;
+    --ghost: #fafbff;
+    --success-bg: #eefbf1;
+}
+
+/* POS container */
+.pos-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Scoped so it doesn't affect sidebar or other pages */
+.pos-wrap .kbd {
+    color: #7b8092;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.pos-wrap .kbd.tail {
+    margin-left: auto;
+}
+
+.pos-wrap .btn {
+    border: 1px solid var(--stroke);
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.pos-wrap .btn.outline:hover {
+    background: #fafbff;
+}
+
+.pos-wrap .btn.ghost {
+    background: #fff;
+}
+
+.pos-wrap .btn.primary {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.pos-wrap .btn.primary:hover {
+    background: var(--primary-600);
+}
+
+.pos-wrap .btn.big {
+    padding: 14px 18px;
+    border-radius: 12px;
+}
+
+.pos-wrap .btn.outline.danger {
+    border-color: #ffd9d9;
+    color: #b42318;
+}
+
+.pos-wrap .pos-icon-btn {
+    border: 1px solid var(--stroke);
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: #344054;
+}
+
+.pos-wrap .pos-icon-btn.ghost {
+    background: var(--ghost);
+}
+
+.pos-wrap .pos-tabs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pos-wrap .pos-tab {
+    background: #fff;
+    border: 1px solid var(--stroke);
+    border-radius: 9px;
+    padding: 8px 12px;
+    font-weight: 700;
+}
+
+.pos-wrap .pos-tab.active {
+    box-shadow: 0 1px 0 #e8e8f0;
+}
+
+.pos-wrap .pos-link {
+    border: none;
+    background: transparent;
+    color: var(--primary);
+    font-weight: 700;
+    padding: 6px 4px;
+    cursor: pointer;
+}
+
+.pos-wrap .pos-link:hover {
+    text-decoration: underline;
+}
+
+.pos-wrap .pos-main {
+    display: flex;
+    gap: 16px;
+}
+
+.pos-wrap .pos-left {
+    flex: 1 1 68%;
+    background: #fff;
+    border: 1px solid var(--stroke);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.pos-wrap .pos-toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.pos-wrap .pos-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--stroke);
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+}
+
+.pos-wrap .pos-search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+}
+
+.pos-wrap .pos-search .search-ic {
+    margin-right: 8px;
+    color: #667085;
+}
+
+.pos-wrap .pos-search .kbd.tail {
+    position: absolute;
+    right: 10px;
+    background: #f1f2f8;
+    border-radius: 8px;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+.pos-wrap .pos-grid-header {
+    display: grid;
+    grid-template-columns: 64px 1.2fr 1fr 100px 100px 110px 140px;
+    gap: 0;
+    background: #f8f9fc;
+    border: 1px solid var(--stroke);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.pos-wrap .pos-grid-header .c {
+    padding: 10px 12px;
+    font-weight: 700;
+    color: #596074;
+    border-right: 1px solid var(--stroke);
+}
+
+.pos-wrap .pos-grid-header .c:last-child {
+    border-right: none;
+}
+
+.pos-wrap .pos-grid-empty {
+    border: 1px solid var(--stroke);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    color: #5e667b;
+}
+
+.pos-wrap .box-icon {
+    width: 64px;
+    height: 64px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 14px;
+}
+
+.pos-wrap .empty-title {
+    font-weight: 700;
+    color: #4b5563;
+}
+
+.pos-wrap .empty-sub {
+    color: #9aa1af;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.pos-wrap .empty-desc {
+    color: #6b7280;
+}
+
+.pos-wrap .pos-right {
+    flex: 1 1 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pos-wrap .pos-right-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pos-wrap .pos-card {
+    background: #fff;
+    border: 1px solid var(--stroke);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.pos-wrap .card-title {
+    font-weight: 800;
+    color: #313647;
+    margin-bottom: 10px;
+}
+
+.pos-wrap .card-title.with-hint .kbd {
+    margin-left: 6px;
+}
+
+.pos-wrap .pos-card .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-top: 1px dashed #eef0f6;
+}
+
+.pos-wrap .pos-card .row:first-of-type {
+    border-top: none;
+}
+
+.pos-wrap .pos-card .row .val {
+    font-weight: 700;
+}
+
+.pos-wrap .pos-card .row.total {
+    background: #f6fff2;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #e7f7df;
+    font-weight: 800;
+}
+
+.pos-wrap .receive-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pos-wrap .receive-row .rs {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.pos-wrap .receive-row .method {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--stroke);
+    background: #fff;
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+
+.pos-wrap .cust-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pos-wrap .cust-name {
+    font-weight: 700;
+    color: #3c4151;
+}
+
+.pos-wrap .pos-footer {
+    display: flex;
+    gap: 12px;
+    margin-top: 2px;
+}

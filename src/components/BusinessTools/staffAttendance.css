@@ -1,0 +1,89 @@
+/* Scoped styles: won't affect the sidebar or other pages */
+.sap-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Cards row */
+.sap-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.sap-card {
+    background: #fff;
+    border: 1px solid var(--stroke);
+    border-radius: 12px;
+    padding: 24px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    place-items: center;
+    min-height: 230px;
+}
+
+.sap-illus {
+    width: 140px;
+    height: 140px;
+    border-radius: 16px;
+    background: #fff8e6;
+    /* soft yellow like the screenshot */
+    color: #6b6f7c;
+    display: grid;
+    place-items: center;
+    font-size: 44px;
+}
+
+.sap-card-caption {
+    text-align: center;
+    color: #4b5563;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-top: 16px;
+}
+
+/* Center CTA block */
+.sap-center {
+    margin-top: 8px;
+    background: #fff;
+    border: 1px solid var(--stroke);
+    border-radius: 12px;
+    padding: 36px 20px;
+    display: grid;
+    place-items: center;
+    gap: 10px;
+}
+
+.sap-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: #2b2f3a;
+    text-align: center;
+}
+
+.sap-sub {
+    margin: 0;
+    color: #6b7280;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .sap-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .sap-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .sap-illus {
+        width: 120px;
+        height: 120px;
+        font-size: 38px;
+    }
+}

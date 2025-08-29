@@ -1,0 +1,105 @@
+/* Layout */
+.sms-page .page-title {
+    font-weight: 800;
+}
+
+.sms-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6px 0 14px;
+}
+
+/* Hero card */
+.sms-hero {
+    text-align: center;
+    padding: 28px;
+}
+
+.sms-hero-art {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.sms-hero-title {
+    font-weight: 800;
+    color: #2f3344;
+    margin-top: 2px;
+}
+
+.sms-hero-sub {
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+/* Cards */
+.sms-tiles {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.sms-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 14px;
+    padding: 18px 20px;
+    color: #fff;
+}
+
+.sms-card.blue {
+    background: linear-gradient(90deg, #2c7be5 0%, #1b5fc9 100%);
+}
+
+.sms-card.orange {
+    background: linear-gradient(90deg, #f3954b 0%, #e36a3f 100%);
+}
+
+.sms-card-text h3 {
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.sms-card-text p {
+    opacity: .95;
+    margin-bottom: 10px;
+}
+
+/* “Select Template” */
+.sms-card .btn.ghost {
+    background: #fff;
+    color: #2f3344;
+    border-color: transparent;
+    font-weight: 700;
+}
+
+/* Right decorations */
+.sms-thumbs {
+    display: flex;
+    gap: 10px;
+}
+
+.sms-thumb {
+    width: 96px;
+    height: 64px;
+    background: #ffffffcc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #253046;
+    font-weight: 800;
+    border: 1px solid #ffffff88;
+}
+
+.sms-discount {
+    background: #fff;
+    color: #0f172a;
+    padding: 16px 20px;
+    font-weight: 900;
+    border-radius: 14px;
+    border: 2px dashed #0f172a;
+}

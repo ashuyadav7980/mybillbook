@@ -1,0 +1,869 @@
+.si-wrap {
+    padding: 18px 22px 28px;
+}
+
+.si-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.btn {
+    border: 0;
+    background: #635bff;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn.primary {
+    background: #635bff;
+}
+
+.btn.outline {
+    background: #fff;
+    color: #111827;
+    border: 1px solid #e5e7eb;
+}
+
+.btn.ghost {
+    background: #fff;
+    color: #111827;
+    border: 1px solid #e5e7eb;
+}
+
+.icon-btn {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* KPI */
+.si-kpis {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.kpi {
+    padding: 14px;
+}
+
+.kpi-lg {
+    border: 2px solid #e7e9ff;
+}
+
+.kpi-title {
+    font-weight: 600;
+    color: #334155;
+}
+
+.kpi-title.ok {
+    color: #0a7a3b;
+}
+
+.kpi-title.bad {
+    color: #b42318;
+}
+
+.kpi-val {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+/* toolbar */
+.si-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.si-bar .left,
+.si-bar .right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.input.with-ico,
+.select.with-ico {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input.with-ico input {
+    border: 0;
+    outline: none;
+    width: 240px;
+}
+
+.select.with-ico .chev {
+    margin-left: 8px;
+}
+
+.select.with-ico {
+    cursor: pointer;
+}
+
+/* head utilities area (reports + gear) */
+.si-table-head {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+}
+
+.si-table-head .filler {
+    flex: 1;
+}
+
+.si-table-head .head-utils {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rep-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #60a5fa;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, .15);
+    font-weight: 600;
+}
+
+.rep-btn .ico {
+    color: #1d4ed8;
+}
+
+/* dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 220px;
+    z-index: 6;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 6px;
+}
+
+.menu .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 12px;
+    border: 0;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu .menu-item:hover {
+    background: #f3f4f6;
+}
+
+/* table */
+.si-table {
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.t-head {
+    display: grid;
+    grid-template-columns: 1.1fr 1.5fr 1.5fr 1fr 1fr 1fr;
+    padding: 10px 12px;
+    background: #f8fafc;
+    font-weight: 700;
+    color: #475569;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.t-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #6b7280;
+    padding: 48px 0;
+}
+
+/* modal */
+.si-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, .45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.si-modal {
+    width: 760px;
+    max-height: 88vh;
+    overflow: auto;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.si-modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.si-modal-head .title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.si-modal-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.si-modal-foot {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 12px 16px;
+    border-top: 1px solid #eef0f4;
+}
+
+/* setting rows */
+.setting-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.setting-row .sr-left {
+    max-width: 540px;
+}
+
+.sr-title {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sr-desc {
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.pill {
+    background: #e0e7ff;
+    color: #4338ca;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+/* switch */
+.switch {
+    position: relative;
+    width: 46px;
+    height: 26px;
+    display: inline-block;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #e5e7eb;
+    border-radius: 999px;
+    transition: .2s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    top: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+.switch input:checked+.slider {
+    background: #7c3aed;
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+/* theme field & customize */
+.field-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.field-l .f-title {
+    font-weight: 700;
+}
+
+.select.wide {
+    min-width: 220px;
+}
+
+.customize {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: #f8fbff;
+    border: 1px dashed #c7d2fe;
+}
+
+.cz-left .cz-big {
+    margin-bottom: 8px;
+}
+
+.cz-illus .box {
+    width: 120px;
+    height: 70px;
+    background: #e5e7eb;
+    border-radius: 8px;
+}
+
+.cz-illus .line {
+    width: 120px;
+    height: 8px;
+    background: #cbd5e1;
+    margin-top: 6px;
+    border-radius: 6px;
+}
+
+.cz-illus .line.short {
+    width: 80px;
+}
+
+/* ---------- Page shell ---------- */
+.si-wrap {
+    padding: 18px 22px 28px;
+}
+
+.si-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* ---------- Utilities / primitives ---------- */
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.btn {
+    border: 0;
+    background: #635bff;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: #635bff;
+    color: #fff;
+}
+
+.btn.outline {
+    background: #fff;
+    color: #111827;
+    border: 1px solid #e5e7eb;
+}
+
+.btn.ghost {
+    background: #fff;
+    color: #111827;
+    border: 1px solid #e5e7eb;
+}
+
+.icon-btn {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* ---------- KPI cards ---------- */
+.si-kpis {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.kpi {
+    padding: 14px;
+}
+
+.kpi-lg {
+    border: 2px solid #e7e9ff;
+}
+
+.kpi-title {
+    font-weight: 600;
+    color: #334155;
+}
+
+.kpi-title.ok {
+    color: #0a7a3b;
+}
+
+.kpi-title.bad {
+    color: #b42318;
+}
+
+.kpi-val {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+/* ---------- Toolbar (search + date + actions) ---------- */
+.si-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.si-bar .left,
+.si-bar .right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.input.with-ico,
+.select.with-ico {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input.with-ico input {
+    border: 0;
+    outline: none;
+    width: 240px;
+    font-size: 14px;
+    color: #111827;
+}
+
+.select.with-ico {
+    cursor: pointer;
+}
+
+.select.with-ico .chev {
+    margin-left: 8px;
+}
+
+/* ---------- Date range dropdown ---------- */
+.date-dd {
+    position: relative;
+}
+
+.date-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    min-width: 175px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.date-btn.open {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, .15);
+}
+
+.date-btn .chev {
+    margin-left: 10px;
+}
+
+.date-menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 280px;
+    z-index: 8;
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.date-scroll {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.date-item {
+    width: 100%;
+    text-align: left;
+    padding: 14px 16px;
+    background: #fff;
+    border: 0;
+    border-bottom: 1px solid #eef2f7;
+    cursor: pointer;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+.date-item:last-child {
+    border-bottom: 0;
+}
+
+.date-item:hover {
+    background: #f3f4f6;
+}
+
+/* ---------- Head util row (Reports + Settings) ---------- */
+.si-table-head {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+}
+
+.si-table-head .filler {
+    flex: 1;
+}
+
+.si-table-head .head-utils {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rep-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #60a5fa;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, .15);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.rep-btn .ico {
+    color: #1d4ed8;
+}
+
+/* ---------- Dropdown menu ---------- */
+.dropdown {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 220px;
+    z-index: 6;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 6px;
+}
+
+.menu .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 12px;
+    border: 0;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #0f172a;
+    font-size: 14px;
+}
+
+.menu .menu-item:hover {
+    background: #f3f4f6;
+}
+
+/* ---------- Table ---------- */
+.si-table {
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.t-head {
+    display: grid;
+    grid-template-columns: 1.1fr 1.5fr 1.5fr 1fr 1fr 1fr;
+    padding: 10px 12px;
+    background: #f8fafc;
+    font-weight: 700;
+    color: #475569;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.t-head .c {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.th-sort {
+    opacity: .7;
+}
+
+.t-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #6b7280;
+    padding: 48px 0;
+}
+
+/* ---------- Modal (Quick Invoice Settings) ---------- */
+.si-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, .45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.si-modal {
+    width: 760px;
+    max-height: 88vh;
+    overflow: auto;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.si-modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.si-modal-head .title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.si-modal-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.si-modal-foot {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 12px 16px;
+    border-top: 1px solid #eef0f4;
+}
+
+/* Setting rows */
+.setting-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.setting-row .sr-left {
+    max-width: 540px;
+}
+
+.sr-title {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sr-desc {
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.pill {
+    background: #e0e7ff;
+    color: #4338ca;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    width: 46px;
+    height: 26px;
+    display: inline-block;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #e5e7eb;
+    border-radius: 999px;
+    transition: .2s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    top: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+.switch input:checked+.slider {
+    background: #7c3aed;
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+/* Theme field + promo box */
+.field-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.field-l .f-title {
+    font-weight: 700;
+}
+
+.select.wide {
+    min-width: 220px;
+}
+
+.customize {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: #f8fbff;
+    border: 1px dashed #c7d2fe;
+    border-radius: 12px;
+}
+
+.cz-left .cz-big {
+    margin-bottom: 8px;
+}
+
+.cz-illus .box {
+    width: 120px;
+    height: 70px;
+    background: #e5e7eb;
+    border-radius: 8px;
+}
+
+.cz-illus .line {
+    width: 120px;
+    height: 8px;
+    background: #cbd5e1;
+    margin-top: 6px;
+    border-radius: 6px;
+}
+
+.cz-illus .line.short {
+    width: 80px;
+}

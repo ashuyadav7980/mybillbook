@@ -1,0 +1,522 @@
+.sb-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 12px
+}
+
+.sb-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 6px
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #334155;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    color: #fff
+}
+
+.b-meta {
+    min-width: 0
+}
+
+.b-name {
+    font-weight: 700;
+    color: #e2e8f0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.b-sub {
+    font-size: 12px;
+    color: #94a3b8
+}
+
+.btn.wide {
+    width: 100%;
+    justify-content: flex-start;
+    color: #e2e8f0;
+    border-color: transparent;
+    background: rgba(255, 255, 255, 0.06)
+}
+
+.plan {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    background: #121a33;
+    border-radius: 10px;
+    border: 1px solid #1e293b
+}
+
+.pill {
+    background: #0b1223;
+    color: #eab308;
+    border: 1px dashed #334155;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-weight: 700
+}
+
+.trial {
+    margin-left: auto;
+    background: #7f1d1d;
+    color: #fecaca;
+    border-radius: 999px;
+    padding: 4px 8px;
+    font-size: 12px
+}
+
+.sb-group {
+    margin-top: 14px
+}
+
+.sb-sec {
+    padding: 10px 8px;
+    color: #9aa8bf;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .04em
+}
+
+.sb-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 0;
+    background: transparent;
+    border-radius: 10px;
+    color: #cbd5e1;
+    cursor: pointer
+}
+
+.sb-nav:hover {
+    background: #101936
+}
+
+.sb-nav.active {
+    background: #1e293b;
+    color: #fff
+}
+
+.ico {
+    font-size: 18px
+}
+
+.lbl {
+    font-weight: 600
+}
+
+.sb-bottom {
+    margin-top: auto
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    color: #9aa8bf;
+    font-size: 12px;
+    padding: 8px 10px
+}
+
+/* ---- split button ---- */
+.split-btn {
+    display: flex;
+    position: relative;
+    z-index: 40
+}
+
+.split-main {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.split-caret {
+    width: 42px;
+    justify-content: center;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+.split-caret.on {
+    transform: rotate(180deg)
+}
+
+.split-btn .btn {
+    background: rgba(255, 255, 255, 0.06);
+    color: #e2e8f0;
+    border-color: #1f2a44
+}
+
+.split-btn .btn:hover {
+    background: #101936
+}
+
+/* ---- dropdown panel ---- */
+.menu-panel {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 270px;
+    max-height: 70vh;
+    overflow: auto;
+    border-radius: 12px;
+    padding: 8px 0;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, .2);
+}
+
+.menu-sec {
+    padding: 10px 14px;
+    margin: 6px 0 4px;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu-sec::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 0;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.menu-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    color: #0f172a;
+    font-weight: 600;
+    text-align: left;
+}
+
+.menu-item:hover {
+    background: #f3f4f6
+}
+
+.mi-ico {
+    width: 18px;
+    display: grid;
+    place-items: center;
+    color: #475569
+}
+
+/* Make the whole sidebar fill the column height */
+.sb-wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 12px
+}
+
+/* Scrollable middle column */
+.sb-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 6px;
+    /* space for scrollbar */
+}
+
+/* Optional: prettier scrollbar */
+.sb-scroll::-webkit-scrollbar {
+    width: 8px
+}
+
+.sb-scroll::-webkit-scrollbar-thumb {
+    background: #23314f;
+    /* subtle for dark bg */
+    border-radius: 8px;
+}
+
+.sb-scroll::-webkit-scrollbar-track {
+    background: transparent
+}
+
+/* Firefox */
+.sb-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #23314f transparent;
+}
+
+/* show more toggle */
+.showmore {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0 6px;
+    padding: 10px 12px;
+    background: #101936;
+    border: 1px solid #1e293b;
+    color: #cbd5e1;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.showmore .chev {
+    transition: transform .2s ease
+}
+
+.showmore.on .chev {
+    transform: rotate(180deg)
+}
+
+/* Collapsible Sales styles */
+.sb-collapse .chev {
+    margin-left: auto;
+    transition: transform .18s ease;
+}
+
+.sb-collapse.open .chev.rot {
+    transform: rotate(180deg);
+}
+
+.sb-sub {
+    margin-top: 6px;
+}
+
+.sb-subnav {
+    width: 100%;
+    text-align: left;
+    padding: 10px 14px 10px 48px;
+    border: 0;
+    border-radius: 14px;
+    background: transparent;
+    color: #cbd5e1;
+    cursor: pointer;
+    display: block;
+}
+
+.sb-subnav:hover {
+    background: #19233e;
+}
+
+.sb-subnav.active {
+    background: #27345e;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Collapsible section styles */
+.sb-collapse .chev {
+    margin-left: auto;
+    transition: transform .18s ease
+}
+
+.sb-collapse.open .chev.rot {
+    transform: rotate(180deg)
+}
+
+.sb-sub {
+    margin-top: 6px
+}
+
+.sb-subnav {
+    width: 100%;
+    text-align: left;
+    padding: 10px 14px 10px 48px;
+    border: 0;
+    border-radius: 14px;
+    background: transparent;
+    color: #cbd5e1;
+    cursor: pointer;
+    display: block;
+}
+
+.sb-subnav:hover {
+    background: #19233e
+}
+
+.sb-subnav.active {
+    background: #27345e;
+    color: #fff;
+    font-weight: 700
+}
+
+/* ensure the middle area of the sidebar scrolls */
+.sb-scroll {
+    overflow-y: auto;
+}
+
+/* Split-button dropdown scrolling */
+.menu-panel {
+    width: 320px;
+    /* nice width for labels + icons */
+    max-height: 70vh;
+    /* safety cap */
+    padding: 8px 0;
+}
+
+.menu-scroll {
+    max-height: 60vh;
+    /* actual scroll area */
+    overflow: auto;
+    padding: 4px 0;
+}
+
+.menu-divider {
+    border-top: 1px solid var(--stroke, #e6e8ee);
+    margin: 6px 0;
+}
+
+/* === Split dropdown width: narrower === */
+.split-btn .menu-panel {
+    width: 240px;
+    /* was 320px */
+}
+
+/* Keep it readable on wider screens */
+@media (min-width: 720px) {
+    .split-btn .menu-panel {
+        width: 260px;
+    }
+}
+
+/* Tighten item spacing for the smaller width */
+.split-btn .menu-item {
+    padding: 8px 10px;
+    gap: 10px;
+    /* if you're using gap; otherwise keep your margin */
+}
+
+/* Prevent label wrapping in the narrow menu */
+.split-btn .menu-item .mi-label {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Slightly tighter section paddings/dividers */
+.split-btn .menu-sec {
+    padding: 6px 12px;
+}
+
+.split-btn .menu-divider {
+    margin: 6px 0;
+}
+
+/* Helper pill like the 2nd UI */
+.scroll-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 1px solid var(--stroke, #2a3243);
+    border-radius: 999px;
+    color: var(--muted, #9aa4b2);
+    margin: 12px 0 2px 4px;
+    user-select: none;
+}
+
+.scroll-pill .chev {
+    opacity: 0.9;
+}
+
+/* If you previously set .menu-panel width larger, keep it slim */
+.menu-panel {
+    width: 300px;
+    /* narrower like your screenshot */
+    max-height: 70vh;
+    /* stays scrollable */
+}
+
+.menu-scroll {
+    overflow: auto;
+    max-height: inherit;
+}
+
+/* Collapsed trigger */
+.showmore {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--stroke, #2a3243);
+    border-radius: 12px;
+    color: var(--muted, #9aa4b2);
+    background: transparent;
+    margin: 8px 0 6px 0;
+    font-weight: 600;
+}
+
+/* Expanded hint pill at the bottom */
+.scroll-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid var(--stroke, #2a3243);
+    border-radius: 9999px;
+    color: var(--muted, #9aa4b2);
+    background: transparent;
+    margin: 10px 0 2px 0;
+    font-weight: 600;
+}
+
+.showmore .chev,
+.scroll-pill .chev {
+    opacity: 0.9;
+}
+
+/* Split menu panel size (slimmer) & scroll */
+.menu-panel {
+    width: 300px;
+    /* slimmer width */
+    max-height: 70vh;
+    overflow: hidden;
+    /* outer contains rounded corners/shadow */
+}
+
+.menu-scroll {
+    max-height: 70vh;
+    overflow: auto;
+    /* actual scrolling region */
+}
+
+.menu-divider {
+    height: 1px;
+    background: var(--stroke, #2a3243);
+    opacity: 0.35;
+    margin: 8px 0;
+}
+
+/* (If needed) ensure the middle area scrolls naturally */
+.sb-scroll {
+    overflow: auto;
+}
